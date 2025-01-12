@@ -4,7 +4,19 @@
 <title>
 </title> 
 </head>
-<body bgcolor="beige"> <a href=https://www.facebook.com/profile.php?id=100057539376250&mibextid=ZbWKwL> <img src="menu\AAAA.png" width="100" height="100"> </a>
+<body bgcolor="beige"> 
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+    <a href=https://www.facebook.com/profile.php?id=100057539376250&mibextid=ZbWKwL> <img src="menu\AAAA.png" width="100" height="100"> </a>
 <img src="menu\s.png">
 <a href="origen.html">
 <img src="menu\Captura de pantalla 2025-01-07 183433.png"> </a>
@@ -59,5 +71,19 @@ Desde una sinfonía compleja hasta una simple melodía tarareada, la música hab
         imagen.style.filter = 'grayscale(0%)'; // Sin filtro
         });
 </script>
+    <script> 
+        document.body.addEventListener('mousemove', (e) => {
+            // Obtén las coordenadas del mouse
+            const x = e.clientX / window.innerWidth; // Porcentaje horizontal
+            const y = e.clientY / window.innerHeight; // Porcentaje vertical
+
+            // Cambia el fondo usando un gradiente dinámico
+            document.body.style.background = `
+                radial-gradient(circle at ${x * 100}% ${y * 100}%, 
+                rgba(255, 69, 0, 0.8), 
+                rgba(0, 0, 139, 0.8))
+            `;
+        }); 
+    </script>
 </body>
 </html>
