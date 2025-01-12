@@ -1,5 +1,6 @@
-<html>
-<head>
+<html lang="es">
+<head><meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>
 </title> 
 </head>
@@ -14,7 +15,7 @@
 <div id="fadeElement">
   
 
-<br> <center><img src="imagenes\banner.png"> </center>
+<br> <center><img src="imagenes\banner.png" id="banner"> </center>
 
 
   
@@ -44,6 +45,18 @@ Desde una sinfonía compleja hasta una simple melodía tarareada, la música hab
 </div> </td>
 
 </table>
+<script> const imagen = document.getElementById('banner');
+ // Evento al pasar el cursor
+    imagen.addEventListener('mouseenter', () => {
+        imagen.style.transform = 'rotate(360deg) scale(1.2)'; // Gira y aumenta
+        imagen.style.transition = 'transform 1s ease, filter 1s ease'; // Suaviza el movimiento
+        imagen.style.filter = 'grayscale(50%)'; // Aplica filtro gris
+    });
 
+    // Evento al quitar el cursor
+    imagen.addEventListener('mouseleave', () => {
+        imagen.style.transform = 'rotate(0deg) scale(1)'; // Tamaño original
+        imagen.style.filter = 'grayscale(0%)'; // Sin filtro
+</script>
 </body>
 </html>
