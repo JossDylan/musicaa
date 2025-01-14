@@ -1,9 +1,14 @@
-<html> 
-<title> Generos Musicales </title>
+<!DOCTYPE html>
+<html lang="en"> 
+  <head> <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title> Generos Musicales </title> 
+  </head>
+
 <body bgcolor="#D5B895">
 <center> <h1> Generos Músicales </h1>
 <table width="80%"> <tr> <td>
-<img src="imagenes\spotify.webp" width=400 height=400> </td>
+<img id="spotifyLogo" src="imagenes\spotify.webp" alt="Logo de Spotify" width=400 height=400 style="cursor: pointer;"> </td>
 
 <td> <p style="text-align: justify;">
 Los géneros musicales son categorías que agrupan diferentes estilos de música con características comunes, como ritmos, instrumentos, estructuras y temáticas. Estas categorías permiten clasificar las obras musicales según sus elementos distintivos, facilitando la identificación y el disfrute de diferentes estilos.
@@ -32,6 +37,24 @@ El regional mexicano es un género musical que engloba diversas tradiciones y es
 <p style="text-align: justify;"> El reguetón es un género musical urbano que combina influencias del reggae en español, el dancehall, el hip-hop y la música latina. Surgió en Puerto Rico a mediados de los años 1990 y desde entonces se ha convertido en uno de los géneros más populares y globales, destacándose por sus ritmos pegajosos, letras directas y un estilo vibrante y enérgico. </td> 
 </table>
 <a href="index.html"> <img src="menu/integrantes.png" style="float: right; margin-left: 10px;" width=200 height=80> </a>
+   <script>
+        // Selecciona el logo
+        const logo = document.getElementById('spotifyLogo');
+
+        // Función para agrandar el logo
+        function enlargeLogo() {
+            logo.style.width = "700px";
+        }
+
+        // Función para restaurar el tamaño original
+        function resetLogo() {
+            logo.style.width = "400px";
+        }
+
+        // Asigna eventos al logo
+        logo.addEventListener('mouseover', enlargeLogo);
+        logo.addEventListener('mouseout', resetLogo);
+    </script> </body>
 </html>
 
 
