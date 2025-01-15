@@ -16,7 +16,7 @@ Cada género musical tiene su propio conjunto de reglas y tradiciones que lo dif
 
 Los géneros musicales reflejan la diversidad cultural, histórica y emocional de las sociedades, permitiendo que las personas se conecten con diferentes contextos, épocas y emociones a través de la música. </td> 
 <tr> <td> <a href="alternativo.html">
-<img src="imagenes\alternativo.png"> </td> <td>
+<img class="bouncyImage" src="imagenes\alternativo.png" style="cursor: pointer; transition: all 0.5s ease;"> </td> <td>
 <center> <h1> Genero Alternativo </h1> <p style="text-align: justify;">
 
 
@@ -25,14 +25,14 @@ El género musical alternativo, o simplemente alternativo, es un término amplio
 El alternativo no es un género único, sino más bien un paraguas que abarca una variedad de estilos, como el rock alternativo, el pop alternativo o incluso la música electrónica alternativa. Este término está asociado a artistas y bandas que buscan un enfoque más original, experimental o innovador en su música. </td>
 <tr> <td> <h1> Genero Pop </h1> <p style="text-align: justify;">
 El pop es uno de los géneros musicales más populares y accesibles a nivel mundial, diseñado para atraer a un público amplio con melodías pegajosas, letras simples y una producción sofisticada. Su nombre proviene de "música popular", y aunque tiene sus raíces en la década de 1950, ha evolucionado constantemente, adaptándose a los gustos de cada generación.
-</td> <td> <center> <a href="pop.html"> <img src="generos\pop\pop.png"> </a> </td> </center>
+</td> <td> <center> <a href="pop.html"> <img class="bouncyImage" src="generos\pop\pop.png" style="cursor: pointer; transition: all 0.5s ease;"> </a> </td> </center>
 <tr> <td> 
-<a href="bachata.html"> <img src="generos\bachata\bachata.png"> </a> </td> <td> <center> <h1> Bachata </h1> </center>  <p style="text-align: justify;">
+<a href="bachata.html"> <img class="bouncyImage" src="generos\bachata\bachata.png" style="cursor: pointer; transition: all 0.5s ease;"> </a> </td> <td> <center> <h1> Bachata </h1> </center>  <p style="text-align: justify;">
 La bachata es un género musical y un estilo de baile originario de la República Dominicana. Surgió en la década de 1960, fusionando influencias del bolero, el son cubano y otros estilos caribeños. Inicialmente asociada con sectores humildes y ambientes rurales, la bachata ha evolucionado hasta convertirse en un género popular a nivel internacional. </td> <tr> <td>
 <center> <h1> Regional Mexicano </h1> </center> <p style="text-align: justify;">
 El regional mexicano es un género musical que engloba diversas tradiciones y estilos originarios de México. Este género es un reflejo de la rica diversidad cultural del país, mezclando influencias indígenas, europeas y africanas, y abarcando una amplia gama de subgéneros como el mariachi, el norteño, la banda, el ranchero y el corrido. Es conocido por su capacidad de narrar historias y expresar emociones profundas relacionadas con la vida cotidiana, el amor, la familia y la identidad cultural. </td> <td> <center> <a href="regional.html">
-<img src="generos/regional\regional.png"> </a> </center> </td> <tr> <td> 
-<a href="reggaeton.html"> <img src="generos\reggaeton\reggaeton.png"> </a></td> <td> <h1> Reggaeton </h1>
+<img class="bouncyImage" src="generos/regional\regional.png" style="cursor: pointer; transition: all 0.5s ease;"> </a> </center> </td> <tr> <td> 
+<a href="reggaeton.html"> <img class="bouncyImage" src="generos\reggaeton\reggaeton.png" style="cursor: pointer; transition: all 0.5s ease;"> </a></td> <td> <h1> Reggaeton </h1>
 <p style="text-align: justify;"> El reguetón es un género musical urbano que combina influencias del reggae en español, el dancehall, el hip-hop y la música latina. Surgió en Puerto Rico a mediados de los años 1990 y desde entonces se ha convertido en uno de los géneros más populares y globales, destacándose por sus ritmos pegajosos, letras directas y un estilo vibrante y enérgico. </td> 
 </table>
 <a href="index.html"> <img src="menu/integrantes.png" style="float: right; margin-left: 10px;" width=200 height=80> </a>
@@ -55,7 +55,30 @@ El regional mexicano es un género musical que engloba diversas tradiciones y es
         // Asigna eventos al logo
         logo.addEventListener('mouseover', pulseAndGlow);
         logo.addEventListener('mouseout', resetEffect);
-    </script>c
+    </script>
+ <script>
+        // Selecciona todas las imágenes con la clase "bouncyImage"
+        const images = document.querySelectorAll('.bouncyImage');
+
+        // Función para aplicar el efecto de rebote y brillo
+        function bounceAndGlow() {
+            this.style.transform = "translateY(-20px) scale(1.1)";
+            this.style.filter = "drop-shadow(0 0 20px magenta)";
+        }
+
+        // Función para restaurar el estado original
+        function resetEffect() {
+            this.style.transform = "translateY(0) scale(1)";
+            this.style.filter = "none";
+        }
+
+        // Asigna los eventos a cada imagen
+        images.forEach(image => {
+            image.addEventListener('mouseover', bounceAndGlow);
+            image.addEventListener('mouseout', resetEffect);
+        });
+    </script>
+ 
 </body>
 </html>
 
